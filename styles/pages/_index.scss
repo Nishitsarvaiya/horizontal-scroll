@@ -1,0 +1,49 @@
+.main-container {
+	padding-right: 500px;
+
+	.content {
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+
+		.gallery {
+			width: 250vw;
+			display: grid;
+			grid-template-columns: repeat(50, 2%);
+			grid-template-rows: repeat(50, 2%);
+			padding-left: 12vw;
+			height: 100%;
+			position: relative;
+			align-items: center;
+			background-color: #f6f7f8;
+
+			&-helper-text {
+				grid-area: 43/1 / span 2 / span 1;
+				font-size: 1.25rem;
+			}
+
+			&-jumbo {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				text-transform: uppercase;
+				font-size: 12em;
+				font-weight: 500;
+				letter-spacing: 40px;
+
+				&.fill {
+					color: #222222;
+					opacity: 0.2;
+				}
+
+				&.outline {
+					z-index: 2;
+					mix-blend-mode: overlay;
+				}
+			}
+		}
+	}
+}

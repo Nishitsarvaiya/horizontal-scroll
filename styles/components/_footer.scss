@@ -1,0 +1,108 @@
+footer {
+	position: relative;
+	height: 100%;
+
+	.footer {
+		position: relative;
+		overflow: hidden;
+		height: 100%;
+		background: #252a47;
+		display: grid;
+		place-items: center;
+		width: 100vw;
+		z-index: -1;
+		background: #8e2de2; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #4a00e0, #8e2de2); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(
+			to right,
+			#4a00e0,
+			#8e2de2
+		); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+		.footer-title {
+			position: relative;
+			font-size: calc(clamp(3.25em, 14vw, 12em));
+			font-weight: 400;
+			line-height: 1.2;
+			letter-spacing: 30px;
+			text-align: center;
+			margin-bottom: 3.125rem;
+			z-index: 1;
+			color: #ffffff;
+		}
+
+		.contact-addresses {
+			width: 50vw;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 10%;
+			color: white;
+
+			h1 {
+				font-size: 2.25rem;
+				text-transform: uppercase;
+				font-weight: bold;
+				margin-bottom: 30px;
+				letter-spacing: 2px;
+			}
+			p {
+				margin: 10px 0 10px;
+			}
+		}
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: calc(clamp(5em, 21vw, 12em) * 0.75);
+		background: rgb(0, 0, 0);
+		background: -moz-linear-gradient(
+			90deg,
+			rgba(0, 0, 0, 1) 0%,
+			rgba(0, 0, 0, 0.8995973389355743) 10%,
+			rgba(0, 0, 0, 0.804359243697479) 20%,
+			rgba(0, 0, 0, 0.700717787114846) 30%,
+			rgba(0, 0, 0, 0.5998774509803921) 40%,
+			rgba(0, 0, 0, 0.4962359943977591) 50%,
+			rgba(0, 0, 0, 0.39539565826330536) 60%,
+			rgba(0, 0, 0, 0.30015756302521013) 70%,
+			rgba(0, 0, 0, 0.20211834733893552) 80%,
+			rgba(0, 0, 0, 0.10127801120448177) 90%,
+			rgba(0, 0, 0, 0) 100%
+		);
+		background: -webkit-linear-gradient(
+			90deg,
+			rgba(0, 0, 0, 1) 0%,
+			rgba(0, 0, 0, 0.8995973389355743) 10%,
+			rgba(0, 0, 0, 0.804359243697479) 20%,
+			rgba(0, 0, 0, 0.700717787114846) 30%,
+			rgba(0, 0, 0, 0.5998774509803921) 40%,
+			rgba(0, 0, 0, 0.4962359943977591) 50%,
+			rgba(0, 0, 0, 0.39539565826330536) 60%,
+			rgba(0, 0, 0, 0.30015756302521013) 70%,
+			rgba(0, 0, 0, 0.20211834733893552) 80%,
+			rgba(0, 0, 0, 0.10127801120448177) 90%,
+			rgba(0, 0, 0, 0) 100%
+		);
+		background: linear-gradient(
+			90deg,
+			rgba(0, 0, 0, 1) 0%,
+			rgba(0, 0, 0, 0.8995973389355743) 10%,
+			rgba(0, 0, 0, 0.804359243697479) 20%,
+			rgba(0, 0, 0, 0.700717787114846) 30%,
+			rgba(0, 0, 0, 0.5998774509803921) 40%,
+			rgba(0, 0, 0, 0.4962359943977591) 50%,
+			rgba(0, 0, 0, 0.39539565826330536) 60%,
+			rgba(0, 0, 0, 0.30015756302521013) 70%,
+			rgba(0, 0, 0, 0.20211834733893552) 80%,
+			rgba(0, 0, 0, 0.10127801120448177) 90%,
+			rgba(0, 0, 0, 0) 100%
+		);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+		z-index: 1;
+		opacity: 0.5;
+	}
+}
