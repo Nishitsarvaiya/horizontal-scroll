@@ -31,7 +31,7 @@ const Footer: FunctionComponent = () => {
 				style={{
 					backgroundImage: `url(https://images.unsplash.com/photo-1594630957561-df0346706d90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80)`,
 				}}>
-				<h2 className='footer-title' data-scroll data-scroll-speed={2} data-scroll-direction='vertical'>
+				<h2 className='footer-title' data-scroll data-scroll-speed={-2} data-scroll-direction='vertical'>
 					<div className='footer-title-line' data-scroll data-scroll-speed={-2}>
 						LET’S WORK
 					</div>
@@ -39,20 +39,6 @@ const Footer: FunctionComponent = () => {
 						TOGETHER
 					</div>
 				</h2>
-				{/* <div className='contact-addresses'>
-					{addresses.map((info) => (
-						<div key={info.town}>
-							<h1>{info.town}</h1>
-							<div>
-								{info.address.split(',').map((element) => (
-									<p key={element}>{element}</p>
-								))}
-							</div>
-							<p>{info.phone}</p>
-							<p>{info.email}</p>
-						</div>
-					))}
-				</div> */}
 			</div>
 		</footer>
 	);

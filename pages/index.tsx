@@ -1,15 +1,15 @@
-import type { NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { useRef } from 'react';
-import { LocomotiveScrollProvider, useLocomotiveScroll } from 'react-locomotive-scroll';
 import { Footer, GalleryItem, Header } from '../components';
 import { images } from '../lib/imageData';
 
-const Home: NextPage = () => {
-	const { asPath } = useRouter();
-	const containerRef = useRef(null);
+export const getStaticProps: GetStaticProps = async (context) => {
+	return {
+		props: {},
+	};
+};
 
+const Home: NextPage = () => {
 	const gallery = images.map((batch, idx) =>
 		batch.map((image, imageIdx) => (
 			<GalleryItem src={image} idx={imageIdx} key={imageIdx} columnOffset={idx * 14} />
@@ -17,11 +17,7 @@ const Home: NextPage = () => {
 	);
 
 	return (
-		<LocomotiveScrollProvider
-			options={{ smooth: true, lerp: 0.06, direction: 'horizontal', multiplier: 0.4 }}
-			location={asPath}
-			containerRef={containerRef}
-			onLocationChange={(scroll: any) => scroll.scrollTo(0, { duration: 0, disableLerp: true })}>
+		<>
 			<Head>
 				<title>Horizontal Scroll | Nishit Sarvaiya</title>
 				<meta
@@ -32,7 +28,7 @@ const Home: NextPage = () => {
 			</Head>
 			<Header />
 			<main className='main-container'>
-				<div className='scroll-container' data-scroll-container ref={containerRef}>
+				<div className='scroll-container' data-scroll-container>
 					<div className='content'>
 						<div className='gallery'>
 							{gallery}
@@ -46,7 +42,7 @@ const Home: NextPage = () => {
 					</div>
 				</div>
 			</main>
-		</LocomotiveScrollProvider>
+		</>
 	);
 };
 
