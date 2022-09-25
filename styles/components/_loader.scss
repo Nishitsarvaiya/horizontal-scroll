@@ -1,0 +1,35 @@
+.loader-container {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 999;
+	display: flex;
+	padding-right: 50px;
+	justify-content: flex-end;
+	align-items: flex-end;
+
+	background-color: #37393a;
+
+	.counter-container {
+		overflow: hidden;
+		height: calc(100vh / 4);
+		min-height: calc(100vh / 4);
+
+		.counter-list {
+			list-style-type: none;
+
+			li {
+				h3 {
+					z-index: 9999;
+					margin-top: 0px;
+					color: #ffffff;
+					font-size: calc(100vh / 4);
+					line-height: calc(100vh / 4);
+					font-weight: 300;
+				}
+			}
+		}
+	}
+}
